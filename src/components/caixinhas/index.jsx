@@ -7,8 +7,10 @@ export default function Caixinha(props) {
             <h3>{props.titulo}</h3>
 
 
-
-            <Link to={`/${props.link}`}>Selecionar</Link>
+            <div className='botões'>
+                <Link to={`/${props.linkC}`}>Consultar</Link>
+                <Link to={`/${props.linkI}`}>Inserir</Link>
+            </div>
         </div>
     )
 }

@@ -11,10 +11,10 @@ export default function Inicio() {
                 <h2>Selecione com qual tabela você deseja interagir:</h2>
 
                 <div className="caixinhas">
-                    <Caixinha titulo='Canal' link='canal'/>
-                    <Caixinha titulo='Canal Programa' link='programa'/>
-                    <Caixinha titulo='Usuário' link='usuario'/>
-                    <Caixinha titulo='Programa Favorito' link='favorito'/>
+                    <Caixinha titulo='Canal' linkC='consultar-canal' linkI='inserir-canal' />
+                    <Caixinha titulo='Canal Programa' linkC='consultar-programa' linkI='inserir-programa' />
+                    <Caixinha titulo='Usuário' linkC='consultar-usuario' linkI='inserir-usuario' />
+                    <Caixinha titulo='Programa Favorito' linkC='consultar-favorito' linkI='inserir-favorito' />
 
                 </div>
 
