@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Inicio from "./pages/inicio";
-import Usuario from "./pages/usuario";
+import Usuario from "./pages/usuario/cadastrousuario.jsx";
 import Canal from "./pages/canal";
 import Programa from "./pages/canalPrograma/cadastroprograma.jsx";
 import Favorito from "./pages/programaFavorito";
