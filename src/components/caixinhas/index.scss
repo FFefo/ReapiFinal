@@ -1,0 +1,17 @@
+.comp-caixinha{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+
+    border: 1px solid black;
+    border-radius: 15px;
+
+    width: 200px;
+    height: 100px;
+
+    a{
+        text-decoration: none;
+        color: #40c6cf;
+    }
+}

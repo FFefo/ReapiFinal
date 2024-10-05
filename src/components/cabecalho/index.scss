@@ -1,0 +1,15 @@
+.comp-cabecalho {
+    background-color: #40c6cf;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+
+    color: white;
+
+    a {
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+    }
+}
