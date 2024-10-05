@@ -1,0 +1,16 @@
+.pagina-programa{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+
+    .conteudo{
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        gap: 20px;
+        font-size: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
