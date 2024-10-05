@@ -36,10 +36,6 @@ export default function Programa() {
         setNomePrograma(resp.data.nome);
     }
 
-    useEffect(() => {
-        Buscar()
-    }, [])
-
 
 
     return (
