@@ -1,4 +1,4 @@
-.comp-caixinha{
+.comp-caixinha {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -10,8 +10,14 @@
     width: 200px;
     height: 100px;
 
-    a{
-        text-decoration: none;
-        color: #40c6cf;
+    .botões {
+        display: flex;
+        justify-content: space-around;
+
+        a {
+            text-decoration: none;
+            color: #40c6cf;
+        }
     }
+
 }
