@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Cabecalho from '../../components/cabecalho';
@@ -13,7 +13,7 @@ export default function Programa() {
 
     const { id } = useParams();
 
-    async function Salvar(){
+    async function Salvar() {
         const paramCorpo = {
             "canal": canalId,
             "nome": nomePrograma,
@@ -25,15 +25,6 @@ export default function Programa() {
         let resp = await axios.post(url, paramCorpo);
 
         alert('Programa adicionado, ID: ' + resp.data.novoId);
-    }
-
-    async function Buscar(){
-        const url = `http://localhost:3200/canalPrograma/${id}`
-        let resp = await axios.get(url);
-
-        console.log(resp.data);
-
-        setNomePrograma(resp.data.nome);
     }
 
 

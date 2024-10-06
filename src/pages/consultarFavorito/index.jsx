@@ -4,21 +4,21 @@ import axios from 'axios';
 import Cabecalho from '../../components/cabecalho';
 import './index.scss'
 
-export default function ConsultarCanal() {
+export default function ConsultarFavorito() {
 
-    const [canal, setCanal] = useState([]);
+    const [favorito, setFavorito] = useState([]);
 
-    async function Buscar() {
-        const url = 'http://localhost:3200/canal/';
+        async function Buscar() {
+        const url = 'http://localhost:3200/programaFavorito/';
         let resp = await axios.get(url);
-        setCanal(resp.data);
-    }
+        setFavorito(resp.data);
+        }
 
     return (
-        <div className='pagina-consultar-canal'>
+        <div className='pagina-consultar-programa'>
             <Cabecalho />
 
-            <h1>Consultar Canais</h1>
+            <h1>Consultar Programas</h1>
 
             <button onClick={Buscar}>Buscar</button>
 
@@ -26,21 +26,22 @@ export default function ConsultarCanal() {
                 <thead>
                     <tr>
                         <th>ID</th>
+                        <th>Canal ID</th>
                         <th>Nome</th>
-                        <th>Número</th>
-                        <th>Aberto</th>
+                        <th>Genêro</th>
+                        <th>Horário</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                    {canal.map(item =>
+                    {favorito.map(item =>
                         <tr>
                             <td>{item.id}</td>
+                            <td>{item.canal}</td>
                             <td>{item.nome}</td>
-                            <td>{item.numero}</td>
-                            <td>{item.aberto}</td>
-                            <td><Link to={`/inserir-canal/${item.id}`}>Alterar</Link></td>
-                            <td><Link to={`/inserir-canal/${item.id}`}>Deletar</Link></td>
+                            <td>{item.genero}</td>
+                            <td>{item.horario}</td>
+                            <td><Link to= {`/inserir-programa/${item.id}`}>Alterar</Link></td>
                         </tr>
                     )}
                 </tbody>

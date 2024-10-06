@@ -26,7 +26,7 @@ export default function ConsultarUsuario() {
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Usuário</th>
+                        <th>Nome</th>
                     </tr>
                 </thead>
 
@@ -35,7 +35,8 @@ export default function ConsultarUsuario() {
                         <tr>
                             <td>{item.id}</td>
                             <td>{item.nome}</td>
-                            <td><Link to= {`/cadastrar/${item.id}`}>Alterar</Link></td>
+                            <td><Link to={`/inserir-usuario/${item.id}`}>Alterar</Link></td>
+                            <td><Link to={`/inserir-usuario/${item.id}`}>Deletar</Link></td>
                         </tr>
                     )}
                 </tbody>

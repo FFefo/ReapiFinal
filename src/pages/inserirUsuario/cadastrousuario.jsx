@@ -21,14 +21,37 @@ export default function Usuario() {
         alert('Usuario adicionado, ID: ' + resp.data.novoId);
     }
 
-    async function Buscar(){
+    async function Alterar() {
+        const paramCorpo = {
+            "nome": usuarioNome
+        }
+
+        const url = `http://localhost:3200/usuario/${id}`;
+        let resp = await axios.put(url, paramCorpo);
+
+        alert('Canal alterado, ID: ' + resp.data.novoId);
+    }
+
+    async function Deletar() {
         const url = `http://localhost:3200/usuario/${id}`
+        let resp = await axios.delete(url)
+
+        alert('Canal removido, ID: ' + id)
+    }
+
+    async function Buscar() {
+        const url = `http://localhost:3200/usuario/${id}`;
         let resp = await axios.get(url);
 
         console.log(resp.data);
 
+
         setUsuarioNome(resp.data.nome);
     }
+
+    useEffect(() => {
+        Buscar()
+    }, [])
 
 
 

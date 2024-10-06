@@ -41,8 +41,8 @@ export default function ConsultarPrograma() {
                             <td>{item.nome}</td>
                             <td>{item.genero}</td>
                             <td>{item.horario}</td>
-                            <td><Link to= {`/cadastrar/${item.id}`}>Alterar</Link></td>
-                        </tr>
+                            <td><Link to={`/inserir-programa/${item.id}`}>Alterar</Link></td>
+                            <td><Link to={`/inserir-programa/${item.id}`}>Deletar</Link></td>                        </tr>
                     )}
                 </tbody>
 
