@@ -38,7 +38,7 @@ export default function Canal() {
         const url = `http://localhost:3200/canal/${id}`;
         let resp = await axios.put(url, paramCorpo);
 
-        alert('Canal alterado, ID: ' + resp.data.novoId);
+        alert('Canal alterado, ID: ' + id);
     }
 
     async function Deletar() {
@@ -69,7 +69,8 @@ export default function Canal() {
             <Cabecalho />
 
             <h1>Cadastrar Canais</h1>
-            <h1>{id}</h1>
+
+            <h1 className='id'>Id: {id}</h1>
 
             <div className='conteudo'>
 

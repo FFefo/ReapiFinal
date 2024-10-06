@@ -8,17 +8,17 @@ export default function ConsultarFavorito() {
 
     const [favorito, setFavorito] = useState([]);
 
-        async function Buscar() {
+    async function Buscar() {
         const url = 'http://localhost:3200/programaFavorito/';
         let resp = await axios.get(url);
         setFavorito(resp.data);
-        }
+    }
 
     return (
         <div className='pagina-consultar-programa'>
             <Cabecalho />
 
-            <h1>Consultar Programas</h1>
+            <h1>Consultar Favoritos</h1>
 
             <button onClick={Buscar}>Buscar</button>
 
@@ -26,10 +26,9 @@ export default function ConsultarFavorito() {
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Canal ID</th>
-                        <th>Nome</th>
-                        <th>Genêro</th>
-                        <th>Horário</th>
+                        <th>Usuário</th>
+                        <th>Programa</th>
+                        <th>Avaliação</th>
                     </tr>
                 </thead>
 
@@ -37,11 +36,11 @@ export default function ConsultarFavorito() {
                     {favorito.map(item =>
                         <tr>
                             <td>{item.id}</td>
-                            <td>{item.canal}</td>
-                            <td>{item.nome}</td>
-                            <td>{item.genero}</td>
-                            <td>{item.horario}</td>
-                            <td><Link to= {`/inserir-programa/${item.id}`}>Alterar</Link></td>
+                            <td>{item.usuario}</td>
+                            <td>{item.programa}</td>
+                            <td>{item.avaliacao}</td>
+                            <td><Link to={`/inserir-favorito/${item.id}`}>Alterar</Link></td>
+                            <td><Link to={`/inserir-favorito/${item.id}`}>Deletar</Link></td>
                         </tr>
                     )}
                 </tbody>

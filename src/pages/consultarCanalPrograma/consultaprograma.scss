@@ -1,9 +1,30 @@
-.pagina-consultar-programa{
+.pagina-consultar-programa {
     display: flex;
     flex-direction: column;
     gap: 20px;
 
-    button{
+    table {
+
+
+        width: 1200px;
+
+        th {
+            text-align: left;
+            padding: 5px;
+        }
+
+        td {
+            padding: 5px;
+            border-top: 1px solid #000;
+        }
+
+        a {
+            text-decoration: none;
+            color: #40c6cf;
+        }
+    }
+
+    button {
         align-self: flex-start;
 
     }

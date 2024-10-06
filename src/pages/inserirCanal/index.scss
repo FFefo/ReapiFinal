@@ -1,18 +1,19 @@
-.pagina-canal{
+.pagina-canal {
     padding: 0px;
     margin: 0px;
 
-    .button{
+    .button {
         padding: 30px;
     }
-    .conteudo{
+
+    .conteudo {
         display: flex;
         flex-direction: column;
         padding: 50px;
         gap: 20px;
         font-size: 20px;
 
-        div{
+        div {
             display: flex;
             gap: 15px;
         }

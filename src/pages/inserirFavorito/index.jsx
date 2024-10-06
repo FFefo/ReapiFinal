@@ -36,7 +36,7 @@ export default function Favorito() {
         const url = `http://localhost:3200/programaFavorito/${id}`;
         let resp = await axios.put(url, paramCorpo);
 
-        alert('Canal alterado, ID: ' + resp.data.novoId);
+        alert('Canal alterado, ID: ' + id);
     }
 
     async function Deletar() {
@@ -66,8 +66,8 @@ export default function Favorito() {
         <div className='pagina-favorito'>
             <Cabecalho />
 
-            <h1>Cadastrar Canais</h1>
-            <h1>{id}</h1>
+            <h1>Cadastrar Favoritos</h1>
+            <h1 className='id'>Id: {id}</h1>
 
             <div className='conteudo'>
 

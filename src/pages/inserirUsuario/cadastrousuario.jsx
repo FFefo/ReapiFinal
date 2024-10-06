@@ -29,7 +29,7 @@ export default function Usuario() {
         const url = `http://localhost:3200/usuario/${id}`;
         let resp = await axios.put(url, paramCorpo);
 
-        alert('Canal alterado, ID: ' + resp.data.novoId);
+        alert('Canal alterado, ID: ' + id);
     }
 
     async function Deletar() {
@@ -60,7 +60,7 @@ export default function Usuario() {
             <Cabecalho />
 
             <h1>Cadastrar Usuários</h1>
-            <h1>{id}</h1>
+            <h1 className='id'>Id: {id}</h1>
 
             <div className='form'>
 
@@ -71,7 +71,8 @@ export default function Usuario() {
 
             </div>
 
-            <button onClick={Salvar}> Salvar </button>
+            {id > 0 ? <button onClick={Alterar}> Alterar </button> : <button onClick={Salvar}> Salvar </button>}
+            {id > 0 ? <button onClick={Deletar}> Deletar </button> : ''}
 
         </div>
     )
